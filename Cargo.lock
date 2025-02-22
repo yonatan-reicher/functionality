@@ -3,5 +3,14 @@
 version = 3
 
 [[package]]
-name = "pipe"
-version = "0.1.0"
+name = "functionality"
+version = "1.0.0"
+dependencies = [
+ "pipe-trait",
+]
+
+[[package]]
+name = "pipe-trait"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c1be1ec9e59f0360aefe84efa6f699198b685ab0d5718081e9f72aa2344289e2"
