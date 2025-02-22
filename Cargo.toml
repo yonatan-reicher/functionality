@@ -1,5 +1,7 @@
 [package]
 name = "pipe"
+description = "Piping results to functions with ease. |> from Elixir/F#"
+license = "MIT"
 version = "0.1.0"
 edition = "2021"
 
