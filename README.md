@@ -48,3 +48,11 @@ use functionality::prelude::*;
 let sorted = vec![3, 2, 1].mutate(|v| v.sort());
 assert_eq!(sorted, vec![1, 2, 3]);
 ```
+
+## Future Plans
+
+I plan on coming back to this crate and adding more useful things to it. If you have any ideas, please send them to me!
+Contact me at yony252525@gmail.com.
+
+I do want to only put important, useful things in this crate. For example, I thought about adding a macro to make piping
+easier (something like `pipe! { input |> f1 |> f2 |> ... }` but it sounds not essential nearly as much as `.pipe`).
