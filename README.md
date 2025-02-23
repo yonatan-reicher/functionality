@@ -55,4 +55,5 @@ I plan on coming back to this crate and adding more useful things to it. If you 
 Contact me at yony252525@gmail.com.
 
 I do want to only put important, useful things in this crate. For example, I thought about adding a macro to make piping
-easier (something like `pipe! { input |> f1 |> f2 |> ... }` but it sounds not essential nearly as much as `.pipe`).
+easier (something like `pipe! { input |> f1 |> f2 |> ... }`) but it sounded not nearly as essential as `.pipe` and `.mutate`
+for my kind of programing.
