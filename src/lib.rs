@@ -93,6 +93,31 @@ impl<T: Default> New for T {
 }
 
 // =================================================================================================
+//                                              Try
+// =================================================================================================
+
+/// Just like the unstable `try` block, this macro runs the code inside of it, but in a context
+/// where returns return from it instead of the top function, acting like a try-catch in a
+/// traditional language. This is done by immediately calling a closure.
+///
+/// # Example
+///
+/// ```
+/// use functionality::try_scope;
+/// let r = try_scope! {
+///     let x = Err("helloo")?;
+///     Ok(())
+/// };
+/// assert_eq!(r, Err("helloo"));
+/// ```
+#[macro_export]
+macro_rules! try_scope {
+    ($($t:tt)*) => {
+        (|| { $($t)* })()
+    }
+}
+
+// =================================================================================================
 //                                             Other
 // =================================================================================================
 
@@ -101,7 +126,8 @@ pub mod prelude {
     pub use crate::IntoExt;
     pub use crate::Mutate;
     pub use crate::Pipe;
-    pub use crate::{dyn_fn, dyn_fn_mut, dyn_fn_once};
+    pub use crate::{dyn_fn, dyn_fn_mut};
+    pub use crate::try_scope;
 }
 
 #[cfg(test)]
