@@ -2,7 +2,7 @@
 name = "functionality"
 description = "Rust |> Functional programming = 💖. Useful traits, functions and macros for prettier code."
 license = "MIT"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2021"
 
 [dependencies]
